@@ -5,6 +5,11 @@ import spock.lang.Unroll
 
 class AmountTest extends Specification {
 
+    def half() {
+        expect:
+        Amount.from(3000).half() == Amount.from(1500)
+    }
+
     @Unroll
     def "adjust - #description"() {
         setup:

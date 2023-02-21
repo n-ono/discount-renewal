@@ -30,6 +30,15 @@ public class Amount {
   }
 
   /**
+   * 半額にする
+   *
+   * @return 半額料金
+   */
+  public Amount half() {
+    return new Amount(adjust(value / 2));
+  }
+
+  /**
    * 10 円未満は切り捨てる調整をする
    *
    * @param value 値
