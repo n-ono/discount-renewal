@@ -28,4 +28,8 @@ public class Percentage {
   public static Percentage fifteen() {
     return new Percentage(15);
   }
+
+  public Percentage rest() {
+    return new Percentage(100 - value);
+  }
 }

@@ -1,5 +1,6 @@
 package org.example.domain.core
 
+import org.example.domain.discount.factory.Percentage
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -17,6 +18,15 @@ class AmountTest extends Specification {
     def half() {
         expect:
         Amount.from(3000).half() == Amount.from(1500)
+    }
+
+    def percentageOf() {
+        setup:
+        def amount = Amount.from(10000)
+        def percentage = Percentage.ten()
+
+        expect:
+        amount.percentageOf(percentage) == Amount.from(1000)
     }
 
     @Unroll

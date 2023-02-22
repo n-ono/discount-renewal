@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
+import org.example.domain.discount.factory.Percentage;
 
 /**
  * 料金
@@ -46,6 +47,16 @@ public class Amount {
    */
   public Amount half() {
     return new Amount(adjust(value / 2));
+  }
+
+  /**
+   * 指定した割合の料金を返す
+   *
+   * @param percentage 割合
+   * @return 指定した割合の料金
+   */
+  public Amount percentageOf(Percentage percentage) {
+    return new Amount(adjust(value * percentage.getValue() / 100));
   }
 
   /**
