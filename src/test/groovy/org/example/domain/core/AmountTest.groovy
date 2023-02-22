@@ -5,6 +5,15 @@ import spock.lang.Unroll
 
 class AmountTest extends Specification {
 
+    def plus() {
+        setup:
+        def amount1 = Amount.from(1000)
+        def amount2 = Amount.from(2000)
+
+        expect:
+        amount1.plus(amount2) == Amount.from(3000)
+    }
+
     def half() {
         expect:
         Amount.from(3000).half() == Amount.from(1500)

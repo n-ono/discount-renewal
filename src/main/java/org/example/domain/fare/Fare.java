@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.example.domain.core.Amount;
+import org.example.domain.price.Price;
+import org.example.domain.super_express_surcharge.SuperExpressSurcharge;
 
 /**
  * 運賃
@@ -31,5 +33,15 @@ public class Fare {
    */
   public Amount forAdult() {
     return amount;
+  }
+
+  /**
+   * 料金を返す
+   *
+   * @param superExpressSurcharge 特急料金
+   * @return 料金
+   */
+  public Price plus(SuperExpressSurcharge superExpressSurcharge) {
+    return new Price(this, superExpressSurcharge);
   }
 }

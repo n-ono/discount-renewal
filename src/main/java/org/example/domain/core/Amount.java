@@ -30,6 +30,16 @@ public class Amount {
   }
 
   /**
+   * 加算する
+   *
+   * @param other 加数
+   * @return 加算した料金
+   */
+  public Amount plus(Amount other) {
+    return new Amount(value + other.value);
+  }
+
+  /**
    * 半額にする
    *
    * @return 半額料金
