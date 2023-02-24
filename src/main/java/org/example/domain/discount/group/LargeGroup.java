@@ -25,9 +25,9 @@ public class LargeGroup extends Group {
    * @return 課金対象の団体
    */
   public ChargedGroup charged() {
-    int maxDiscountedNumbers = total() / GroupSpecification.UNIT_NUMBERS;
-    int discountedAdults = Math.min(adults, maxDiscountedNumbers);
-    int discountedChildren = maxDiscountedNumbers - discountedAdults;
+    final int maxDiscountedNumbers = total() / GroupSpecification.UNIT_NUMBERS;
+    final int discountedAdults = Math.min(adults, maxDiscountedNumbers);
+    final int discountedChildren = maxDiscountedNumbers - discountedAdults;
     return new ChargedGroup(adults - discountedAdults, children - discountedChildren);
   }
 }

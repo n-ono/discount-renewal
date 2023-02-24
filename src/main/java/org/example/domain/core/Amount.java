@@ -21,10 +21,10 @@ public class Amount {
   private final int value;
 
   /**
-   * コンストラクタ
+   * 料金を返す
    *
    * @param value 値
-   * @return
+   * @return 料金
    */
   public static Amount from(int value) {
     return new Amount(adjust(value));

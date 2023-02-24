@@ -26,7 +26,7 @@ public class GroupDiscountTenApplicationTerm {
    * @return 判定結果
    */
   public static boolean include(DepartureMonthDay departureMonthDay) {
-    MonthDay value = departureMonthDay.getValue();
+    MonthDay value = departureMonthDay.value();
     return !(START_MONTH_DAY.isAfter(value) && END_MONTH_DAY.isBefore(value));
   }
 }

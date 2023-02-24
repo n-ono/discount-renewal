@@ -9,6 +9,9 @@ import org.example.domain.core.Amount;
  */
 public class AnnualFixedAmount extends VariationAmount {
 
+  /**
+   * コンストラクタ
+   */
   public AnnualFixedAmount() {
     super(Amount.from(-530));
   }

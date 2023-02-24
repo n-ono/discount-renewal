@@ -29,8 +29,8 @@ public class MediumGroup extends Group {
    * @return 課金対象の団体
    */
   public ChargedGroup charged() {
-    int discountedAdults = Math.min(adults, 1);
-    int discountedChildren = 1 - discountedAdults;
+    final int discountedAdults = Math.min(adults, 1);
+    final int discountedChildren = 1 - discountedAdults;
     return new ChargedGroup(adults - discountedAdults, children - discountedChildren);
   }
 }

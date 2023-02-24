@@ -37,7 +37,7 @@ public class Main {
     Price price = fare.plus(superExpressSurcharge);
 
     // 料金
-    System.out.println(price.forAdult().getValue() * group.charged().getAdults());
-    System.out.println(price.forChild().getValue() * group.charged().getChildren());
+    System.out.println(price.forAdult().getValue() * group.charged().adults());
+    System.out.println(price.forChild().getValue() * group.charged().children());
   }
 }

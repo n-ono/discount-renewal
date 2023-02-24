@@ -32,8 +32,8 @@ public sealed interface Season permits Season.Regular, Season.OffPeak, Season.Pe
      * @return 判定結果
      */
     public static boolean include(DepartureMonthDay departureMonthDay) {
-      return !(MonthDay.of(Month.JANUARY, 16).isAfter(departureMonthDay.getValue()) || MonthDay.of(
-          Month.JANUARY, 30).isBefore(departureMonthDay.getValue()));
+      return !(MonthDay.of(Month.JANUARY, 16).isAfter(departureMonthDay.value()) || MonthDay.of(
+          Month.JANUARY, 30).isBefore(departureMonthDay.value()));
     }
   }
 
@@ -51,8 +51,8 @@ public sealed interface Season permits Season.Regular, Season.OffPeak, Season.Pe
      * @return 判定結果
      */
     public static boolean include(DepartureMonthDay departureMonthDay) {
-      return !(MonthDay.of(Month.DECEMBER, 25).isAfter(departureMonthDay.getValue()) && MonthDay.of(
-          Month.JANUARY, 10).isBefore(departureMonthDay.getValue()));
+      return !(MonthDay.of(Month.DECEMBER, 25).isAfter(departureMonthDay.value()) && MonthDay.of(
+          Month.JANUARY, 10).isBefore(departureMonthDay.value()));
     }
   }
 }

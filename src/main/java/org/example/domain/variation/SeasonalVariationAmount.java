@@ -7,6 +7,11 @@ import org.example.domain.core.Amount;
  */
 public class SeasonalVariationAmount extends VariationAmount {
 
+  /**
+   * コンストラクタ
+   *
+   * @param amount 料金
+   */
   public SeasonalVariationAmount(Amount amount) {
     super(amount);
   }
